@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://i.imgur.com/1uRx3KH.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/ecommerce-product-page-using-react-and-tailwind-axwOAOyhTV](https://www.frontendmentor.io/solutions/ecommerce-product-page-using-react-and-tailwind-axwOAOyhTV)
+- Live Site URL: [https://react-ecommerce-page.vercel.app/](https://react-ecommerce-page.vercel.app/)
 
 ## My process
 
