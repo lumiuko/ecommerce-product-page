@@ -57,7 +57,7 @@ export default function CartDropdown() {
           {hasCartItems ? (
             <div className="px-4 pt-6 pb-8">
               {cartItems}
-              <button className="bg-orange text-white font-bold w-full py-[1.125rem] rounded-10 leading-button">
+              <button className="bg-orange hover:bg-very-light-orange text-white font-bold w-full py-[1.125rem] rounded-10 leading-button transition-colors">
                 Checkout
               </button>
             </div>

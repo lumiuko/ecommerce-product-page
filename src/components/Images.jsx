@@ -52,25 +52,30 @@ export default function Images({ images, isLightbox = false, openLightbox }) {
         className={`relative ${isLightbox ? 'lg:max-w-[550px]' : 'lg:max-w-[445px] lg:cursor-pointer'}`}
         onClick={handleImageClick}
       >
-        <button
-          className={`absolute top-2/4 -translate-y-1/2 bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center ${
-            isLightbox ? '-left-4' : 'lg:hidden left-4'
-          }`}
-          aria-label="Previous image"
-          onClick={prevImage}
-        >
-          <img className="h-[12px]" src={prevIcon} alt="Previous" aria-hidden="true" />
-        </button>
+        {currentImage > 0 && (
+          <button
+            className={`absolute top-2/4 -translate-y-1/2 bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center ${
+              isLightbox ? '-left-4' : 'lg:hidden left-4'
+            }`}
+            aria-label="Previous image"
+            onClick={prevImage}
+          >
+            <img className="h-[12px]" src={prevIcon} alt="Previous" aria-hidden="true" />
+          </button>
+        )}
+
         <div className="relative overflow-hidden flex -z-10 lg:rounded-15">{imageElements}</div>
-        <button
-          className={`absolute top-2/4 -translate-y-1/2 bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center ${
-            isLightbox ? '-right-4' : 'right-4 lg:hidden'
-          }`}
-          aria-label="Next image"
-          onClick={nextImage}
-        >
-          <img className="h-[12px]" src={nextIcon} alt="Next" aria-hidden="true" />
-        </button>
+        {currentImage < images.length - 1 && (
+          <button
+            className={`absolute top-2/4 -translate-y-1/2 bg-white w-[40px] h-[40px] rounded-full flex justify-center items-center ${
+              isLightbox ? '-right-4' : 'right-4 lg:hidden'
+            }`}
+            aria-label="Next image"
+            onClick={nextImage}
+          >
+            <img className="h-[12px]" src={nextIcon} alt="Next" aria-hidden="true" />
+          </button>
+        )}
       </div>
       <div className={`hidden lg:flex mt-8 ${isLightbox ? 'justify-center gap-8' : 'justify-between'}`}>
         {imageThumbnails}

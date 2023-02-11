@@ -58,7 +58,7 @@ export default function Product({ item }) {
             </button>
           </div>
           <button
-            className={`flex justify-center w-full bg-orange text-white py-4 rounded-10 shadow-button transition-colors md:max-w-[272px] lg:shadow-none lg:hover:bg-very-light-orange disabled:cursor-not-allowed disabled:bg-very-light-orange`}
+            className={`flex justify-center w-full bg-orange text-white py-4 rounded-10 shadow-button transition-colors md:max-w-[272px] lg:shadow-none hover:bg-very-light-orange disabled:cursor-not-allowed disabled:bg-very-light-orange`}
             onClick={addToCart}
             disabled={count < 1 || isAddedToCart}
           >
