@@ -34,8 +34,10 @@ export default function Product({ item }) {
       <Images images={item.images} openLightbox={openLightbox} />
       <div className="px-6 lg:px-0 lg:max-w-[445px]">
         <h5 className="text-orange font-bold uppercase text-small-title tracking-small-title">{item.series}</h5>
-        <h1 className="mt-4 text-title leading-title font-bold lg:text-lg-title lg:leading-lg-title">{item.name}</h1>
-        <p className="text-gray mt-4">{item.description}</p>
+        <h1 className="mt-4 lg:mt-6 text-title leading-title font-bold lg:text-lg-title lg:leading-lg-title">
+          {item.name}
+        </h1>
+        <p className="text-gray mt-4 lg:mt-8">{item.description}</p>
         <div className="flex justify-between items-center mt-6 font-bold md:flex-col md:items-start">
           <div className="flex items-center gap-6">
             <span className="text-title">${finalPrice.toFixed(2)}</span>
@@ -45,7 +47,7 @@ export default function Product({ item }) {
           </div>
           {item.discount.has && <span className="text-dark-gray line-through">${item.price.toFixed(2)}</span>}
         </div>
-        <div className="mt-4 flex flex-col gap-4 md:flex-row">
+        <div className="mt-4 lg:mt-8 flex flex-col gap-4 md:flex-row">
           <div className="flex justify-between bg-light-gray px-6 py-4 rounded-10 md:px-4 md:w-[157px]">
             <button aria-label="Decrement product count" onClick={decrementCount}>
               <img src={minusIcon} alt="Minus icon" />

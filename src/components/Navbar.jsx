@@ -49,8 +49,11 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-[1.375rem] md:gap-[2.875rem] ">
           <CartDropdown />
-          <button className="w-[24px] md:w-[50px] rounded-full md:border-[2px] border-transparent hover:border-orange transition-colors">
-            <img src={avatar} className="" alt="User avatar" />
+          <button
+            className="w-[24px] md:w-[50px] rounded-full md:border-[2px] border-transparent hover:border-orange transition-colors"
+            aria-label="Your profile"
+          >
+            <img src={avatar} alt="User avatar" aria-hidden="true" />
           </button>
         </div>
       </div>

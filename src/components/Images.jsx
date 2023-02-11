@@ -13,6 +13,7 @@ export default function Images({ images, isLightbox = false, openLightbox }) {
       <img
         key={index}
         src={image.main}
+        alt={`Image ${index + 1}`}
         className={`shrink-0 h-[300px] ${heightClasses} w-full object-cover transition-transform`}
         style={{ transform: `translateX(-${100 * currentImage}%)` }}
       />
@@ -29,8 +30,14 @@ export default function Images({ images, isLightbox = false, openLightbox }) {
         key={index}
         className={`${buttonClasses} border-orange max-w-[88px] cursor-pointer rounded-10 overflow-hidden transition-all`}
         onClick={() => goToImage(index)}
+        aria-label={`Image ${index + 1}`}
       >
-        <img className={`${imageClasses} hover:opacity-50 transition-opacity`} src={image.thumbnail} />
+        <img
+          className={`${imageClasses} hover:opacity-50 transition-opacity`}
+          alt="Image thumbnail"
+          aria-hidden="true"
+          src={image.thumbnail}
+        />
       </button>
     )
   })
