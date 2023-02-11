@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.dropdown-enter-active {
+  opacity: 1;
+  transition: opacity 200ms, transform 200ms;
+  transform: translateY(0px);
+}
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.dropdown-exit-active {
+  opacity: 0;
+  transition: opacity 200ms, transform 200ms;
+  transform: translateY(10px);
+}
+
+.fadeIn-enter {
+  opacity: 0;
+}
+.fadeIn-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.fadeIn-exit {
+  opacity: 1;
+}
+.fadeIn-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
