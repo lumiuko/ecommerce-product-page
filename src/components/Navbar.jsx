@@ -17,7 +17,7 @@ export default function Navbar() {
   const mobileMenuClasses = isNavOpened ? 'translate-x-0' : '-translate-x-full'
 
   return (
-    <nav className="px-6 fixed top-0 left-0 w-full bg-white z-10">
+    <nav className="px-6 fixed top-0 left-0 w-full bg-white z-20">
       <div className="lg:container py-[1.375rem] flex justify-between items-center md:py-7 md:border-border md:border-b-[1px]">
         <div className="flex items-center">
           <button aria-label="Open menu" onClick={toggleMenu} className="relative z-30 md:hidden mr-4">
