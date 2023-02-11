@@ -59,7 +59,7 @@ export default function Images({ images, isLightbox = false, openLightbox }) {
           aria-label="Previous image"
           onClick={prevImage}
         >
-          <img className="h-[12px]" src={prevIcon} />
+          <img className="h-[12px]" src={prevIcon} alt="Previous" aria-hidden="true" />
         </button>
         <div className="relative overflow-hidden flex -z-10 lg:rounded-15">{imageElements}</div>
         <button
@@ -69,7 +69,7 @@ export default function Images({ images, isLightbox = false, openLightbox }) {
           aria-label="Next image"
           onClick={nextImage}
         >
-          <img className="h-[12px]" src={nextIcon} />
+          <img className="h-[12px]" src={nextIcon} alt="Next" aria-hidden="true" />
         </button>
       </div>
       <div className={`hidden lg:flex mt-8 ${isLightbox ? 'justify-center gap-8' : 'justify-between'}`}>
